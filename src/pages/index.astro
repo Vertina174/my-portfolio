@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Your Name | Your Title"
+  description="A short description of what you do."
+>
+
+  <!-- Header -->
+  <header class="relative z-10 px-6 md:px-12 py-6 opacity-0 animate-fade-in">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="/" class="font-display font-bold text-lg tracking-tight text-gray-900 dark:text-white hover:text-accent transition-colors duration-300">
+        your name
+      </a>
+      <button
+        id="theme-toggle"
+        type="button"
+        class="p-2 rounded-lg text-gray-500 dark:text-neutral-500 hover:text-accent transition-colors duration-300"
+        aria-label="Toggle dark mode"
+      >
+        <!-- Sun icon (visible in dark mode) -->
+        <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+        </svg>
+        <!-- Moon icon (visible in light mode) -->
+        <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="relative z-10">
+    <section class="pt-16 md:pt-24 pb-20 px-6 md:px-12">
+      <div class="max-w-5xl mx-auto w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+
+          <!-- Text Content -->
+          <div class="order-2 md:order-1 text-center md:text-left">
+
+            <h1 class="font-display font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight opacity-0 animate-fade-up stagger-1">
+              Hey, I'm<br>
+              Your Name <span class="inline-block animate-wave origin-[70%_70%]">👋</span>
+            </h1>
+
+            <!-- Role Badges -->
+            <div class="flex flex-wrap gap-3 mt-7 justify-center md:justify-start opacity-0 animate-fade-up stagger-2">
+              <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-accent/30 dark:border-accent/20 text-accent bg-accent/[0.08] dark:bg-accent/[0.06]">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Your Role
+              </span>
+              <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-violet-400/30 dark:border-violet-400/20 text-violet-500 dark:text-violet-400 bg-violet-400/[0.08] dark:bg-violet-400/[0.06]">
+                <span class="w-1.5 h-1.5 rounded-full bg-violet-400"></span>
+                Another Role
+              </span>
+            </div>
+
+            <!-- Tagline -->
+            <p class="mt-6 text-lg md:text-xl text-gray-500 dark:text-neutral-400 leading-relaxed max-w-lg mx-auto md:mx-0 opacity-0 animate-fade-up stagger-3">
+              A short, memorable line about what you do.
+            </p>
+
+            <!-- Terminal Line -->
+            <div class="mt-4 font-mono text-sm text-gray-400 dark:text-neutral-600 opacity-0 animate-fade-up stagger-4">
+              <span class="text-accent">$</span> currently building cool stuff<span class="animate-blink">_</span>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center gap-5 mt-10 justify-center md:justify-start opacity-0 animate-fade-up stagger-5">
+              <span class="text-[11px] font-mono text-gray-400 dark:text-neutral-600 uppercase tracking-[0.2em]">find me</span>
+              <div class="h-px w-6 bg-gray-300 dark:bg-neutral-800"></div>
+
+              <!-- GitHub -->
+              <a href="https://github.com/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-400 dark:text-neutral-600 hover:text-accent transition-colors duration-300" aria-label="GitHub">
+                <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-400 dark:text-neutral-600 hover:text-accent transition-colors duration-300" aria-label="LinkedIn">
+                <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+
+              <!-- X / Twitter -->
+              <a href="https://x.com/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-400 dark:text-neutral-600 hover:text-accent transition-colors duration-300" aria-label="X">
+                <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Profile Image -->
+          <div class="order-1 md:order-2 flex justify-center opacity-0 animate-fade-up stagger-2">
+            <div class="relative group">
+              <!-- Glow effect behind image on hover -->
+              <div class="absolute -inset-1 bg-gradient-to-br from-accent/40 to-violet-500/40 rounded-2xl blur-md opacity-0 dark:opacity-50 group-hover:opacity-40 dark:group-hover:opacity-75 transition-opacity duration-700"></div>
+              <img
+                src="/profile.jpg"
+                alt="Your Name"
+                class="relative w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-2xl object-cover border border-gray-200 dark:border-neutral-800/80"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 py-8 text-center">
+    <p class="text-xs font-mono text-gray-300 dark:text-neutral-800">yourname.dev &mdash; 2025</p>
+  </footer>
+
+  <!-- Blinking cursor animation -->
+  <style>
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    .animate-blink {
+      animation: blink 1s step-end infinite;
+    }
+  </style>
+
+</BaseLayout>
